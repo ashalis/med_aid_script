@@ -5,7 +5,7 @@ from docx import Document
 from docx.shared import Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-openai.api_key = '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'
+openai.api_key = 'yourkeyhere' #insert your key in the quotes
 
 def iterate(path_name):
     """
@@ -42,8 +42,6 @@ def find_in_docx(path):
     Parameters: path is a string
     Precondition: Must be a valid pathname
 
-    Note: I think either the engine I used doesnt have enough tokens to produce a long enough response, or the way I read the file was wrong. 
-       It might only read the first page right now. 
     """
     #gets school and year from file name
     dot = path.find('.')
@@ -85,8 +83,6 @@ def find_in_pdf(path):
     Parameters: path is a string
     Precondition: Must be a valid pathname
 
-    Note: I think either the engine I used doesnt have enough tokens to produce a long enough response, or the way I read the file was wrong. 
-       It might only read the first page right now. 
     """
     #gets school and year from file name
     dot = path.find('.')
